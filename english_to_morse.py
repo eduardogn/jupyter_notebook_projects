@@ -10,8 +10,8 @@ english_to_morse ={
     '0': '-----', '1': '.----', '2': '..---', '3': '...--', '4': '....-',
     '5': '.....', '6': '-....', '7': '--...', '8': '---..', '9': '----.'
 }
-stop = ""
-while stop != "Yes":
+check = "Yes"
+while check == "Yes":
   morse_code = []
   text = input("Type the word to be translated to Morse code: ")
 
@@ -21,8 +21,7 @@ while stop != "Yes":
 
     return ' '.join(morse_code)
 
-
   morse_code_output = translation(text)
   print("Morse code:", morse_code_output)
-  stop = input("Do you want to stop translating? (Yes/No) ")
+  check = input("Do you want to translate another word? (Yes/No) ")
 
